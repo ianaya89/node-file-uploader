@@ -1,7 +1,7 @@
 {
   "name": "node-file-uploader",
   "version": "0.1.0",
-  "description": "this is a mean stack that is develop for blogging",
+  "description": "Demo app for file uplaod using nodejs and express.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
