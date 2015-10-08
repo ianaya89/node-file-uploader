@@ -9,7 +9,8 @@
     "it": false,
     "describe": false,
     "before": false,
-    "beforeEach": false
+    "beforeEach": false,
+    "angular": false
   }
 }
 
