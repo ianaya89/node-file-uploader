@@ -9,12 +9,7 @@
     <meta name="description" content="Creating a blog system with Mean Stack">
     <meta name="author" content="Ignacio Anaya">
     <title>node-file-uploader</title>
-    
-    <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/blog.css" rel="stylesheet">
   </head>
 
   <body ng-controller="FileCtrl">
@@ -23,7 +18,7 @@
 
         <div class="container">
             <nav class="blog-nav">
-                <a class="blog-nav-item active">Home</a>
+                <a class="blog-nav-item active">HOME</a>
             </nav>
         </div>
 
@@ -34,7 +29,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <h3>Upload File</h3> {{f}}
+                    <h1>Upload File</h1> {{f}}
                     <span ng-show="errorMsg">{{errorMsg}}</span>
                     <span ng-show="f.result">Upload Successful</span>
                     <br>
