@@ -53,12 +53,12 @@
 
         <div class="row text-right">
             <hr>
-            <div class="col-md-12">
+            <div class="col-md-6 col-md-offset-3">
                 <div class="form-group">
                     <span ng-show="errorMsg">{{errorMsg}}</span>
                     <span ng-show="f.result">Upload Successful</span>
                     <br>
-                    <button class="btn btn-large btn-success" type="file" ngf-select="uploadFiles($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+                    <button class="btn btn-block btn-primary" type="file" ngf-select="uploadFiles($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
                         Select File
                     </button>
                 </div>
