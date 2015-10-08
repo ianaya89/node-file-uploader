@@ -1,0 +1,44 @@
+{
+  "name": "node-file-uploader",
+  "version": "0.1.0",
+  "description": "this is a mean stack that is develop for blogging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "postinstall" : "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreenPioneer/expressUpload.git"
+  },
+  "keywords": [
+    "upload",
+    "Expressjs",
+    "GreenPioneer"
+  ],
+  "author": "Green Pioneer <green@greenpioneersolutions.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GreenPioneer/expressUpload/issues"
+  },
+  "homepage": "https://github.com/GreenPioneer/expressUpload",
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.3",
+    "gulp": "^3.9.0",
+    "gulp-csslint": "^0.2.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-plato": "^1.0.2",
+    "gulp-using": "0.0.1",
+    "jshint-stylish": "^2.0.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "node-file-uploader",
+  "version": "0.0.1",
+  "dependencies": {
+    "ng-file-upload": "~7.0.15"
+  }
+}

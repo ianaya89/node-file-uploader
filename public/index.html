@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Creating a blog system with Mean Stack">
+    <meta name="author" content="Green Pioneer">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/greenpioneer.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/greenpioneer.png">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Express Upload - by Green Pioneer</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="blogCtrl">
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item active">Home</a>
+
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <h3>Upload File</h3> {{f}}
+                    <span ng-show="errorMsg">{{errorMsg}}</span>
+                    <span ng-show="f.result">Upload Successful</span>
+                    <br>
+                    <button class="btn btn-default campaign-edit-upload-main-btn" type="file" ngf-select="uploadFiles($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+                        Select File</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4" ng-repeat="(key, value) in files">
+                    <div class="thumbnail">
+                        <img alt="Bootstrap Thumbnail First" ng-src="./files/{{value}}" />
+                        <a class="btn" ng-click="edit = true">
+                          Edit<i class="fa fa-pencil"></i>
+                        </a>
+                        <a class="btn" data-ng-click="remove(value);">
+                          Delete<i class="fa fa-trash"></i>
+                        </a>
+                        <div class="caption">
+                            <h3>
+                                {{value}}
+                            </h3>
+                            <input ng-show="edit" ng-model="editValue">
+                            <a ng-show="edit" class="btn btn-primary" ng-click="update(value,editValue)">Update</a>
+                            <p>
+                                <a class="btn btn-primary" target="_blank" ng-href="./files/{{value}}">View File</a>
+                            </p>
+                        </div>
+                        <a class="btn btn-success" target="_blank" ng-href="./api/exists/{{value}}">API:Exists</a>
+                        <a class="btn btn-success" target="_blank" ng-href="./api/stat/{{value}}">API:Stat</a>
+                        <a class="btn btn-success" target="_blank" ng-href="./api/access/{{value}}">API:Access</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+    <footer class="blog-footer">
+        <p>built by <a href="http://greenpioneersolutions.com">Green Pioneer</a></p>
+        <ol class="list-unstyled">
+            <li><a href="https://github.com/GreenPioneer"><i class="fa fa-github"></i> GitHub</a></li>
+            <li><a href="https://twitter.com/greenpioneerdev"><i class="fa fa-facebook-square"></i> Twitter</a></li>
+            <li><a href="https://www.facebook.com/Green-Pioneer-Solutions-1023752974341910"><i class="fa fa-twitter-square"></i> Facebook</a></li>
+        </ol>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload.js">
+    </script>
+    <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-shim.js">
+    </script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</body>
+
+</html>
