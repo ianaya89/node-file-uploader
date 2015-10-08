@@ -2,7 +2,7 @@
 
 angular.module('myApp', ['ui.router', 'ngResource', 'ngFileUpload'])
 
-.controller('blogCtrl', function($scope, $state, $stateParams, $location, $timeout, File, Upload) {
+.controller('FileCtrl', function($scope, $state, $stateParams, $location, $timeout, File, Upload) {
     $scope.state = $state;
     
     $scope.get = function() {
