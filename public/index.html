@@ -10,33 +10,15 @@
     <meta name="author" content="Ignacio Anaya">
     <title>node-file-uploader</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body ng-controller="FileCtrl">
-
-    <div class="blog-masthead">
-
-        <div class="container">
-            <nav class="blog-nav">
-                <a class="blog-nav-item active">HOME</a>
-            </nav>
-        </div>
-
-    </div>
+<body ng-controller="FileCtrl">
 
     <div class="container">
 
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <h1>Upload File</h1> {{f}}
-                    <span ng-show="errorMsg">{{errorMsg}}</span>
-                    <span ng-show="f.result">Upload Successful</span>
-                    <br>
-                    <button class="btn btn-default campaign-edit-upload-main-btn" type="file" ngf-select="uploadFiles($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
-                        Select File
-                    </button>
-                </div>
+            <div class="page-header">
+                <h1>Upload File</h1> {{f}}
             </div>
         </div>
 
@@ -46,40 +28,54 @@
                     <div class="thumbnail">
                         <img alt="Bootstrap Thumbnail First" ng-src="./files/{{value}}" />
                         <a class="btn" ng-click="edit = true">
-                          Edit<i class="fa fa-pencil"></i>
-                      </a>
-                      <a class="btn" data-ng-click="remove(value);">
-                          Delete<i class="fa fa-trash"></i>
-                      </a>
-                      <div class="caption">
-                        <h3>
-                            {{value}}
-                        </h3>
-                        <input ng-show="edit" ng-model="editValue">
-                        <a ng-show="edit" class="btn btn-primary" ng-click="update(value,editValue)">Update</a>
-                        <p>
-                            <a class="btn btn-primary" target="_blank" ng-href="./files/{{value}}">View File</a>
-                        </p>
+                            Edit<i class="fa fa-pencil"></i>
+                        </a>
+                        <a class="btn" data-ng-click="remove(value);">
+                            Delete<i class="fa fa-trash"></i>
+                        </a>
+                        <div class="caption">
+                            <h3>
+                                {{value}}
+                            </h3>
+                            <input ng-show="edit" ng-model="editValue">
+                            <a ng-show="edit" class="btn btn-primary" ng-click="update(value,editValue)">Update</a>
+                            <p>
+                                <a class="btn btn-primary" target="_blank" ng-href="./files/{{value}}">View File</a>
+                            </p>
+                        </div>
+                        <a class="btn btn-success" target="_blank" ng-href="./api/exists/{{value}}">API:Exists</a>
+                        <a class="btn btn-success" target="_blank" ng-href="./api/stat/{{value}}">API:Stat</a>
+                        <a class="btn btn-success" target="_blank" ng-href="./api/access/{{value}}">API:Access</a>
                     </div>
-                    <a class="btn btn-success" target="_blank" ng-href="./api/exists/{{value}}">API:Exists</a>
-                    <a class="btn btn-success" target="_blank" ng-href="./api/stat/{{value}}">API:Stat</a>
-                    <a class="btn btn-success" target="_blank" ng-href="./api/access/{{value}}">API:Access</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-right">
+            <hr>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <span ng-show="errorMsg">{{errorMsg}}</span>
+                    <span ng-show="f.result">Upload Successful</span>
+                    <br>
+                    <button class="btn btn-large btn-success" type="file" ngf-select="uploadFiles($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+                        Select File
+                    </button>
                 </div>
             </div>
         </div>
 
     </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
-<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-<script src="bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
-<script src="js/controller.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+    <script src="js/controller.js"></script>
 </body>
 
 </html>
