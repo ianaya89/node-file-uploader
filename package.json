@@ -1,8 +1,8 @@
 {
   "name": "node-file-uploader",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Demo app for file uplaod using nodejs and express.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app",
@@ -10,19 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GreenPioneer/expressUpload.git"
+    "url": "https://github.com/ianaya89/node-file-uploader.git"
   },
   "keywords": [
     "upload",
     "Expressjs",
-    "GreenPioneer"
+    "node"
   ],
-  "author": "Green Pioneer <green@greenpioneersolutions.com>",
+  "author": "Ignacio Anaya <ignacio.anaya89@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GreenPioneer/expressUpload/issues"
-  },
-  "homepage": "https://github.com/GreenPioneer/expressUpload",
   "dependencies": {
     "body-parser": "^1.14.0",
     "connect-multiparty": "^2.0.0",
