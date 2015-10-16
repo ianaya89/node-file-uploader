@@ -1,5 +1,5 @@
 {
-  "name": "node-file-uploader",
+  "name": "express-file-uploader",
   "version": "0.0.1",
   "description": "Demo app for file uplaod using nodejs and express.",
   "main": "app.js",

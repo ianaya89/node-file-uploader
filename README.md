@@ -1,4 +1,4 @@
-# node-file-uploader
+# express-file-uploader
 
 Demo app for file uplaod using nodejs and express.
 
